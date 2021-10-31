@@ -9,9 +9,10 @@ public class HlavniProgram {
 
     public void main(String[] args) {
         zofka = new Turtle();
+        Color colorDefault = zofka.getPenColor();
+        int penWidthDefault = zofka.getPenWidth();
 
         // snehulak
-
         zofka.setLocation(400, 400);
         zofka.turnRight(90);
         circle(200);
@@ -43,9 +44,9 @@ public class HlavniProgram {
         );
         zofka.turnLeft(angleBetweenSameLengthSides / 2);  //zofka hlavou dolu
         zofka.turnLeft(180); //zofka vychozi smer
+        zofka.setPenWidth(penWidthDefault);
 
         //vlak
-
         zofka.setLocation(1000, 500);
         zofka.setPenColor(Color.RED);
         circle(250);
@@ -61,6 +62,8 @@ public class HlavniProgram {
         zofka.setLocation(910, 500);
         circle(125);
         zofka.turnLeft(90); //zofka hlavou nahoru
+        zofka.setPenColor(colorDefault);
+
     }
 
     public void circle(double diameter) {
